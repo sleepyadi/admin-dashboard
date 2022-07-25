@@ -14,7 +14,7 @@ html, body {
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 4fr;
 }
 
 /* ----------------------------------HEADER--------------------------------- */
@@ -169,7 +169,7 @@ body {
 
 .content {
     grid-column: 2 / -1;
-    padding: 1em;
+    padding: 2em;
     display: grid;
 
     grid-template-columns: 2.5fr 1fr;
@@ -185,4 +185,65 @@ body {
 
 .announcements {
     grid-area: 1 / 2 / 2 / -1;
+    padding: 1em;
+}
+
+.announcements .announcement-board {
+    border-radius: 16px;
+    padding: 1em 2.5em;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+.announcement-board .announcement-entry {
+    border-bottom: 1px solid #696966;
+}
+
+.announcement-board .announcement-entry h4{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.announcement-board .announcement-entry p {
+    color: #696969;
+    margin-top: 0.5em;
+    font-size: 0.9rem;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+
+.trending {
+    padding: 1em;
+}
+
+.trending .user-profiles {
+    border-radius: 16px;
+    padding: 1em 2em;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+.user-profiles .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5em;
+}
+
+.profile img {
+    width: 18%;
+}
+
+.profile p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.profile p:last-child {
+    font-size: 0.9rem;
+    color: #696969;
 }
