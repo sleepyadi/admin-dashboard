@@ -1,10 +1,17 @@
 /* * {
     border: 1px solid red;
 } */
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-Regular.ttf');
+}
+
 
 :root {
     font-size: 100%;
     box-sizing: border-box;
+    font-family: 'Rubik';
+    --card-color: white;
 }
 
 html, body {
@@ -12,6 +19,7 @@ html, body {
 }
 
 body {
+    background-color: #eff6ff;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: auto 4fr;
@@ -20,6 +28,7 @@ body {
 /* ----------------------------------HEADER--------------------------------- */
 
 .header {
+    background-color: var(--card-color);
     grid-column: 2 / -1;
     box-shadow: 0 3px 5px #888888;
     display: grid;
@@ -100,10 +109,12 @@ body {
 
 .dashboard-actions button {
     font-size: 1.1rem;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.3em;
     font-weight: bold;
     border-radius: 16px;
     border: 1px solid #808080;
+    background-color: #0891b2;
+    color: white;
 
 
 }
@@ -118,7 +129,7 @@ body {
 .sidebar {
     grid-row: 1 / 3;
     /* temp bg */
-    background-color: lightblue;
+    background-color: #0891b2;
     padding: 2em;
 
     display: grid;
@@ -131,6 +142,7 @@ body {
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    text-shadow: 3px 3px #888888;
 }
 
 .sidebar ul {
@@ -150,6 +162,7 @@ body {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+    text-shadow: 2px 2px #888888;
 }
 
 .sidebar li a:hover {
@@ -189,6 +202,7 @@ body {
 }
 
 .projects .project-cards {
+    background-color: var(--card-color);
     border-radius: 8px;
     border-left: 8px solid orange;
     box-shadow: 3px 3px 5px #888888;
@@ -209,6 +223,9 @@ body {
     margin-bottom: 0;
 }
 
+.project-cards p {
+    color: #696966;
+}
 .project-cards .project-actions {
     margin-top: auto;
     display: flex;
@@ -232,6 +249,7 @@ body {
 }
 
 .announcements .announcement-board {
+    background-color: var(--card-color);
     border-radius: 16px;
     padding: 1em 2.5em;
     box-shadow: 3px 3px 5px #888888;
@@ -265,6 +283,7 @@ body {
 }
 
 .trending .user-profiles {
+    background-color: var(--card-color);
     border-radius: 16px;
     padding: 1em 2em;
     box-shadow: 3px 3px 5px #888888;
